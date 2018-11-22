@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  Trandemo
+//
+//  Created by GuoYanjun on 2018/11/9.
+//  Copyright © 2018年 shiyujin. All rights reserved.
+//
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+//内部版本号 每次发版递增
+#define KVersionCode 1
+//网络请求
+#define NetRequest [AllUrlrequest Network]
+
+//第三方头文件
+#import "LibHeader.h"
+
+//全局变量-接口-环境配置
+#import "NetPort.h"
+
+//系统宏-全局宏
+#import "AllnounUnity.h"
+
+
+#endif /* PrefixHeader_pch */
