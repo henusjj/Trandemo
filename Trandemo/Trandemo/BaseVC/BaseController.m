@@ -29,8 +29,6 @@
 //  self.view的Y从导航栏下面开始计算
     self.edgesForExtendedLayout =UIRectEdgeNone;
     
-
-    
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];

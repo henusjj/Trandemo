@@ -24,6 +24,7 @@
     self.tableview.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight-Height_TabBar-Height_NavBar);
     [self.view addSubview:self.tableview];
     self.arry=[[NSMutableArray alloc]init];
+    
     [self.arry addObject:@"相机相册"];
     [self.arry addObject:@"相机相册2"];
 

@@ -32,7 +32,13 @@
     [[APIManager manager] GET:url andWithParam:dic];
 }
 
-
+//上传图片
+-(void)upLoadImageRequestWithMode:(upLoadModel *)mode andWithURL:(NSString *)url{
+    [APIManager manager].delegate = self;
+    
+    NSString *fileName = [NSString stringWithFormat:@"image/%@",[mode.name componentsSeparatedByString:@"."].lastObject];
+    [[APIManager manager] uploadFileWithUrl:url fileDataStream:[NSData dataWithContentsOfFile:mode.path] nameKey:mode.name fileName:fileName parameter:nil];
+}
 
 
 

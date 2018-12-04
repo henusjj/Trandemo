@@ -98,22 +98,41 @@
 
 }
 
-//上传
+//上传图片单个图片
 -(void)uploadFileWithUrl:(NSString *)url fileDataStream:(NSData *)fileData nameKey:(NSString *)nameKey fileName:(NSString *)fileName1 parameter:(NSMutableDictionary *)pareameter{
     AFHTTPSessionManager *manager = self.managers;
+//    设置请求头类型
+    [manager.requestSerializer setValue:@"from/data" forHTTPHeaderField:@"Content-Type"];
     
-    [manager POST:url parameters:pareameter constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [manager POST:url parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
+        [formData appendPartWithFileData:fileData name:nameKey fileName:nameKey mimeType:fileName1];
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
-        //
+        //上传进度
+        NSLog(@"%f",uploadProgress.fractionCompleted);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+        //        请求成功
+        if(responseObject){
+            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+            if (self.delegate && [self.delegate respondsToSelector:@selector(requestSucesses:)]) {
+                [self.delegate requestSucesses:dict];
+            }
+        } else {
+            //windown 弹出提示框，暂无数据
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        //        请求失败
+        if (self.delegate && [self.delegate respondsToSelector:@selector(requestError:)]) {
+            [self.delegate requestError:error];
+        }
     }];
 }
--(void)uploadFileWithUrl:(NSString *)url fileDataArray:(NSArray *)imageDataArray nameKey:(NSString *)nameKey fileName:(NSString *)fileName parameter:(NSMutableDictionary *)pareameter{
+
+
+//批量上传
+
+-(void)uploadFileWithUrlMore:(NSString *)url fileDataArray:(NSArray *)imageDataArray nameKey:(NSString *)nameKey fileName:(NSString *)fileName parameter:(NSMutableDictionary *)pareameter{
     AFHTTPSessionManager *manager = self.managers;
     
     [manager POST:url parameters:pareameter constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {

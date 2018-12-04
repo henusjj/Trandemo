@@ -16,6 +16,10 @@
 		4571FE362195690800F84B6D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4571FE352195690800F84B6D /* ViewController.m */; };
 		4571FE3A21958A6700F84B6D /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4571FE3921958A6700F84B6D /* APIManager.m */; };
 		4571FE3D2195907C00F84B6D /* AllUrlrequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4571FE3C2195907C00F84B6D /* AllUrlrequest.m */; };
+		45853E3721AFE0C6009DB377 /* CaCheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45853E3621AFE0C6009DB377 /* CaCheViewController.m */; };
+		45853E3B21B0D556009DB377 /* BannerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45853E3A21B0D556009DB377 /* BannerViewCell.m */; };
+		45CDBCEA21ACE3D2009ED933 /* upLoadImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CDBCE921ACE3D2009ED933 /* upLoadImageController.m */; };
+		45CDBCEE21AD4F7D009ED933 /* upLoadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CDBCED21AD4F7D009ED933 /* upLoadModel.m */; };
 		45DA15DD21A2A77B00045C8F /* CDDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DA15DC21A2A77B00045C8F /* CDDTableViewCell.m */; };
 		45DA15E021A2ABF900045C8F /* CDDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DA15DF21A2ABF900045C8F /* CDDCollectionViewCell.m */; };
 		45DA15E321A2B4D000045C8F /* CDZCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DA15E121A2B4D000045C8F /* CDZCollectionViewItem.m */; };
@@ -80,6 +84,14 @@
 		4571FE3921958A6700F84B6D /* APIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		4571FE3B2195907C00F84B6D /* AllUrlrequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllUrlrequest.h; sourceTree = "<group>"; };
 		4571FE3C2195907C00F84B6D /* AllUrlrequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllUrlrequest.m; sourceTree = "<group>"; };
+		45853E3521AFE0C6009DB377 /* CaCheViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaCheViewController.h; sourceTree = "<group>"; };
+		45853E3621AFE0C6009DB377 /* CaCheViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaCheViewController.m; sourceTree = "<group>"; };
+		45853E3921B0D556009DB377 /* BannerViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerViewCell.h; sourceTree = "<group>"; };
+		45853E3A21B0D556009DB377 /* BannerViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerViewCell.m; sourceTree = "<group>"; };
+		45CDBCE821ACE3D2009ED933 /* upLoadImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = upLoadImageController.h; sourceTree = "<group>"; };
+		45CDBCE921ACE3D2009ED933 /* upLoadImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = upLoadImageController.m; sourceTree = "<group>"; };
+		45CDBCEC21AD4F7D009ED933 /* upLoadModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = upLoadModel.h; sourceTree = "<group>"; };
+		45CDBCED21AD4F7D009ED933 /* upLoadModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = upLoadModel.m; sourceTree = "<group>"; };
 		45DA15DB21A2A77B00045C8F /* CDDTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDDTableViewCell.h; sourceTree = "<group>"; };
 		45DA15DC21A2A77B00045C8F /* CDDTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDDTableViewCell.m; sourceTree = "<group>"; };
 		45DA15DE21A2ABF900045C8F /* CDDCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDDCollectionViewCell.h; sourceTree = "<group>"; };
@@ -197,8 +209,14 @@
 		454709EA219AB5C500891BF5 /* OtherPage */ = {
 			isa = PBXGroup;
 			children = (
+				45853E3821B0D516009DB377 /* View */,
+				45CDBCEB21AD4F66009ED933 /* Model */,
 				454709F1219AB60300891BF5 /* OtherViewController.h */,
 				454709F2219AB60300891BF5 /* OtherViewController.m */,
+				45CDBCE821ACE3D2009ED933 /* upLoadImageController.h */,
+				45CDBCE921ACE3D2009ED933 /* upLoadImageController.m */,
+				45853E3521AFE0C6009DB377 /* CaCheViewController.h */,
+				45853E3621AFE0C6009DB377 /* CaCheViewController.m */,
 			);
 			path = OtherPage;
 			sourceTree = "<group>";
@@ -212,6 +230,24 @@
 				4571FE3921958A6700F84B6D /* APIManager.m */,
 			);
 			path = BaseNetworking;
+			sourceTree = "<group>";
+		};
+		45853E3821B0D516009DB377 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45853E3921B0D556009DB377 /* BannerViewCell.h */,
+				45853E3A21B0D556009DB377 /* BannerViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		45CDBCEB21AD4F66009ED933 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45CDBCEC21AD4F7D009ED933 /* upLoadModel.h */,
+				45CDBCED21AD4F7D009ED933 /* upLoadModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		45DA15DA21A2A6A400045C8F /* View */ = {
@@ -610,7 +646,10 @@
 				45EF90DD2194127100EF0E94 /* AppDelegate+AppService.m in Sources */,
 				45EF90E02194129500EF0E94 /* AppDelegate+RootController.m in Sources */,
 				454709F0219AB5FA00891BF5 /* MineViewController.m in Sources */,
+				45853E3721AFE0C6009DB377 /* CaCheViewController.m in Sources */,
 				45DA15E321A2B4D000045C8F /* CDZCollectionViewItem.m in Sources */,
+				45853E3B21B0D556009DB377 /* BannerViewCell.m in Sources */,
+				45CDBCEE21AD4F7D009ED933 /* upLoadModel.m in Sources */,
 				4571FE3A21958A6700F84B6D /* APIManager.m in Sources */,
 				454709E72199556500891BF5 /* Reachability.m in Sources */,
 				454709F3219AB60300891BF5 /* OtherViewController.m in Sources */,
@@ -625,6 +664,7 @@
 				45EF90EF2195540A00EF0E94 /* NetPort.m in Sources */,
 				45DA15EA21A3F4BD00045C8F /* PickerManager.m in Sources */,
 				45EF90A621940E6C00EF0E94 /* AppDelegate.m in Sources */,
+				45CDBCEA21ACE3D2009ED933 /* upLoadImageController.m in Sources */,
 				45DA15E021A2ABF900045C8F /* CDDCollectionViewCell.m in Sources */,
 				45DA15E721A3D8DB00045C8F /* CeamerViewController.m in Sources */,
 				454709ED219AB5F100891BF5 /* HomeViewController.m in Sources */,

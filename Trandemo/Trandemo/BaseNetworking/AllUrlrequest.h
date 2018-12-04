@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "APIManager.h"
+#import "upLoadModel.h"
 NS_ASSUME_NONNULL_BEGIN
 @protocol responseDelegate <NSObject>
 @optional
@@ -38,9 +39,10 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)LoginRequest;
 
 
-//各个页面的自定义请求
-
-
+/**
+ 3.单张r图片上传
+ */
+-(void)upLoadImageRequestWithMode:(upLoadModel *)mode andWithURL:(NSString *)url;
 
 
 

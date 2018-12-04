@@ -10,7 +10,7 @@
 
 //AFN有网络监听-AFNetworkReachabilityManager
 
-#define TimeOutInterval 30  //请求超时时间
+#define TimeOutInterval 10  //请求超时时间
 
 //请求成功或是失败的回调
 @protocol responseDelegates <NSObject>
@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param url 服务器url
  @param fileData 文件数据流
- @param nameKey 文件数据对应的key
+ @param namekey 文件数据对应的name
  @param fileName1 文件在服务器存储时的名字
  @param pareameter 包含文件类型(mimeType)，名字后缀(suffix),默认是 image/jepg,jepg
  */
@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param pareameter pareameter description
 
  */
--(void)uploadFileWithUrl:(NSString *)url fileDataArray:(NSArray *)imageDataArray nameKey:(NSString *)nameKey fileName:(NSString *)fileName parameter:(NSMutableDictionary *)pareameter;
+-(void)uploadFileWithUrlMore:(NSString *)url fileDataArray:(NSArray *)imageDataArray nameKey:(NSString *)nameKey fileName:(NSString *)fileName parameter:(NSMutableDictionary *)pareameter;
 
 
 
