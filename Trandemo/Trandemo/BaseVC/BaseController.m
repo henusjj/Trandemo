@@ -107,7 +107,7 @@
     if (!_collectionview) {
         UICollectionViewFlowLayout *layout =[[UICollectionViewFlowLayout alloc]init];
         _collectionview = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
-        
+        _collectionview.backgroundColor = [UIColor whiteColor];
         if (@available(iOS 11.0, *)) {
             self.collectionview.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         } else {

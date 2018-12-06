@@ -27,4 +27,5 @@ target 'Trandemo' do
    
    pod 'CYLTabBarController','~> 1.17.4'
    pod 'YYKit'
+   pod 'MJExtension'
 end

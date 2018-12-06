@@ -15,7 +15,7 @@
 //请求成功或是失败的回调
 @protocol responseDelegates <NSObject>
 
--(void)requestSucesses:(id)responseData;
+-(void)requestSucesses:(NSMutableDictionary *)responseData;
 -(void)requestError:(NSError *)error;
 
 

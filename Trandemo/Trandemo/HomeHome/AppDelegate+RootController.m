@@ -9,6 +9,7 @@
 #import "AppDelegate+RootController.h"
 
 @implementation AppDelegate (RootController)
+
 -(void)initWithRootView{
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor=[UIColor whiteColor];
@@ -16,5 +17,6 @@
     CYLTabBarController *tabVc = vc.mainViewController;
     self.window.rootViewController=tabVc;
     [self.window makeKeyAndVisible];
+    
 }
 @end

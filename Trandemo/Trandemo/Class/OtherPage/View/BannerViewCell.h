@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BannerViewCell : UICollectionViewCell
+@property(nonatomic,strong)NSArray *arryItem;
 
 @end
 

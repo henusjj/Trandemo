@@ -26,7 +26,9 @@
     _managers.requestSerializer = [AFHTTPRequestSerializer serializer];
     _managers.responseSerializer = [AFHTTPResponseSerializer serializer];
     _managers.requestSerializer.timeoutInterval = TimeOutInterval;
-    _managers.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
+    _managers.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html",@"text/plain",@"text/json",@"text/javascript", nil];
+    
+    
     return _managers;
 }
 
@@ -52,6 +54,7 @@
 //        请求成功
         if(responseObject){
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+            
             if (self.delegate && [self.delegate respondsToSelector:@selector(requestSucesses:)]) {
                 [self.delegate requestSucesses:dict];
             }
@@ -82,7 +85,7 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //        请求成功
         if(responseObject){
-            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+            NSMutableDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
             if (self.delegate && [self.delegate respondsToSelector:@selector(requestSucesses:)]) {
                 [self.delegate requestSucesses:dict];
             }
@@ -179,16 +182,16 @@
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
         //打印下上传进度
-        DLog(@"%lf",1.0 *uploadProgress.completedUnitCount / uploadProgress.totalUnitCount);
+        NSLog(@"%lf",1.0 *uploadProgress.completedUnitCount / uploadProgress.totalUnitCount);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         //请求成功
-        DLog(@"请求成功：%@",responseObject);
+        NSLog(@"请求成功：%@",responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         //请求失败
-        DLog(@"请求失败：%@",error);
+        NSLog(@"请求失败：%@",error);
     }];
 }
 
@@ -212,16 +215,16 @@
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
         //打印下上传进度
-        DLog(@"%lf",1.0 *uploadProgress.completedUnitCount / uploadProgress.totalUnitCount);
+        NSLog(@"%lf",1.0 *uploadProgress.completedUnitCount / uploadProgress.totalUnitCount);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         //请求成功
-        DLog(@"请求成功：%@",responseObject);
+        NSLog(@"请求成功：%@",responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         //请求失败
-        DLog(@"请求失败：%@",error);
+        NSLog(@"请求失败：%@",error);
     }];
     
 }
@@ -241,11 +244,11 @@
     //下载任务
     NSURLSessionDownloadTask *task = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
         //打印下下载进度
-        DLog(@"%lf",1.0 * downloadProgress.completedUnitCount / downloadProgress.totalUnitCount);
+        NSLog(@"%lf",1.0 * downloadProgress.completedUnitCount / downloadProgress.totalUnitCount);
         
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
         //下载地址
-        DLog(@"默认下载地址:%@",targetPath);
+        NSLog(@"默认下载地址:%@",targetPath);
         
         //设置下载路径，通过沙盒获取缓存地址，最后返回NSURL对象
         NSString *filePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
@@ -255,8 +258,8 @@
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         
         //下载完成调用的方法
-        DLog(@"下载完成：");
-        DLog(@"%@--%@",response,filePath);
+        NSLog(@"下载完成：");
+        NSLog(@"%@--%@",response,filePath);
         
     }];
     

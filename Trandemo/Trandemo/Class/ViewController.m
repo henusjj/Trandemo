@@ -40,7 +40,7 @@
     //读取文件
     NSMutableDictionary *plistDic = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
     
-    DLog(@"%@",plistDic);
+    NSLog(@"%@",plistDic);
     
 }
 

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		44AA8BDBD78F77EF7941CB94 /* libPods-TrandemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE8CC5F9F7F80CB51D56F93 /* libPods-TrandemoTests.a */; };
+		4521808321B7A81200F17BA8 /* bannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4521808121B7A76F00F17BA8 /* bannerCell.m */; };
+		4521808921B8D7C700F17BA8 /* NSArray+jlExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4521808721B8D7C700F17BA8 /* NSArray+jlExtension.m */; };
+		4521808A21B8D7C700F17BA8 /* NSDictionary+jlExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4521808821B8D7C700F17BA8 /* NSDictionary+jlExtension.m */; };
 		454709E72199556500891BF5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 454709E52199556500891BF5 /* Reachability.m */; };
 		454709ED219AB5F100891BF5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 454709EC219AB5F100891BF5 /* HomeViewController.m */; };
 		454709F0219AB5FA00891BF5 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 454709EF219AB5FA00891BF5 /* MineViewController.m */; };
@@ -68,6 +71,12 @@
 		2CC2E11B5609FEF6E5FC519B /* Pods-Trandemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trandemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trandemo/Pods-Trandemo.debug.xcconfig"; sourceTree = "<group>"; };
 		3BA5B18EB59803A23BAFC59D /* Pods-BaseKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseKit/Pods-BaseKit.release.xcconfig"; sourceTree = "<group>"; };
 		40D24799FC60D26DB1E377C4 /* Pods-TrandemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrandemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrandemoTests/Pods-TrandemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4521808021B7A76F00F17BA8 /* bannerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bannerCell.h; sourceTree = "<group>"; };
+		4521808121B7A76F00F17BA8 /* bannerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bannerCell.m; sourceTree = "<group>"; };
+		4521808521B8D7C700F17BA8 /* NSArray+jlExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+jlExtension.h"; sourceTree = "<group>"; };
+		4521808621B8D7C700F17BA8 /* NSDictionary+jlExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+jlExtension.h"; sourceTree = "<group>"; };
+		4521808721B8D7C700F17BA8 /* NSArray+jlExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+jlExtension.m"; sourceTree = "<group>"; };
+		4521808821B8D7C700F17BA8 /* NSDictionary+jlExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+jlExtension.m"; sourceTree = "<group>"; };
 		454709E52199556500891BF5 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		454709E62199556500891BF5 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		454709EB219AB5F100891BF5 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -173,6 +182,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4521808421B8D7C700F17BA8 /* JLLogEncoding */ = {
+			isa = PBXGroup;
+			children = (
+				4521808521B8D7C700F17BA8 /* NSArray+jlExtension.h */,
+				4521808621B8D7C700F17BA8 /* NSDictionary+jlExtension.h */,
+				4521808721B8D7C700F17BA8 /* NSArray+jlExtension.m */,
+				4521808821B8D7C700F17BA8 /* NSDictionary+jlExtension.m */,
+			);
+			path = JLLogEncoding;
+			sourceTree = "<group>";
+		};
 		454709E42199556500891BF5 /* Reachability-判断网络状态 */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +257,8 @@
 			children = (
 				45853E3921B0D556009DB377 /* BannerViewCell.h */,
 				45853E3A21B0D556009DB377 /* BannerViewCell.m */,
+				4521808021B7A76F00F17BA8 /* bannerCell.h */,
+				4521808121B7A76F00F17BA8 /* bannerCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -374,6 +396,7 @@
 		45EF90E3219412E600EF0E94 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				4521808421B8D7C700F17BA8 /* JLLogEncoding */,
 				454709E42199556500891BF5 /* Reachability-判断网络状态 */,
 			);
 			path = Resource;
@@ -649,13 +672,16 @@
 				45853E3721AFE0C6009DB377 /* CaCheViewController.m in Sources */,
 				45DA15E321A2B4D000045C8F /* CDZCollectionViewItem.m in Sources */,
 				45853E3B21B0D556009DB377 /* BannerViewCell.m in Sources */,
+				4521808A21B8D7C700F17BA8 /* NSDictionary+jlExtension.m in Sources */,
 				45CDBCEE21AD4F7D009ED933 /* upLoadModel.m in Sources */,
 				4571FE3A21958A6700F84B6D /* APIManager.m in Sources */,
 				454709E72199556500891BF5 /* Reachability.m in Sources */,
 				454709F3219AB60300891BF5 /* OtherViewController.m in Sources */,
 				4571FE362195690800F84B6D /* ViewController.m in Sources */,
+				4521808321B7A81200F17BA8 /* bannerCell.m in Sources */,
 				45EF90B421940E6E00EF0E94 /* main.m in Sources */,
 				45DA15ED21A3FF8300045C8F /* CeamerViewController2.m in Sources */,
+				4521808921B8D7C700F17BA8 /* NSArray+jlExtension.m in Sources */,
 				4571FE3D2195907C00F84B6D /* AllUrlrequest.m in Sources */,
 				45EF90D921940EBD00EF0E94 /* BaseController.m in Sources */,
 				45EF90F221955AFF00EF0E94 /* BaseNavController.m in Sources */,

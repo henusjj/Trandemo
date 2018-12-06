@@ -32,6 +32,11 @@
     [[APIManager manager] GET:url andWithParam:dic];
 }
 
+-(void)IndexDateRequest:(NSString *)url{
+    [APIManager manager].delegate =self;
+    [[APIManager manager]postWithUrl:url paramWithDic:nil];
+}
+
 //上传图片
 -(void)upLoadImageRequestWithMode:(upLoadModel *)mode andWithURL:(NSString *)url{
     [APIManager manager].delegate = self;
@@ -45,7 +50,8 @@
 
 
 #pragma mark 代理回调数据
--(void)requestSucesses:(id)responseData{
+-(void)requestSucesses:(NSMutableDictionary *)responseData{
+    NSLog(@"%@",responseData);
 //    可以进行同意的数据转模型，返回的是NSDictionary
     if (self.delegate && [self.delegate respondsToSelector:@selector(requestSucesses:)]) {
         [self.delegate requestSucesses:responseData];

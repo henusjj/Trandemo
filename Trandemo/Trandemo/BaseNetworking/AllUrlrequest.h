@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol responseDelegate <NSObject>
 @optional
--(void)requestSucesses:(id)responseData;
+-(void)requestSucesses:(NSMutableDictionary *)responseData;
 -(void)requestError:(NSError *)error;
 @end
 
@@ -46,6 +46,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
+
+/**
+ l数据缓存首页数据
+
+ @param url https://ywdev.youngworld.com.cn/ywapi/server.php/sy_back
+ */
+-(void)IndexDateRequest:(NSString *)url;
 
 
 @end

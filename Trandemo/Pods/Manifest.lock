@@ -16,6 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - CYLTabBarController (1.17.21)
   - Masonry (1.1.0)
+  - MJExtension (3.0.15.1)
   - MJRefresh (3.1.15.7)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - AFNetworking
   - CYLTabBarController (~> 1.17.4)
   - Masonry
+  - MJExtension
   - MJRefresh
   - SDWebImage (~> 3.8)
   - Toast
@@ -41,6 +43,7 @@ SPEC REPOS:
     - AFNetworking
     - CYLTabBarController
     - Masonry
+    - MJExtension
     - MJRefresh
     - SDWebImage
     - Toast
@@ -51,12 +54,13 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CYLTabBarController: 56cd8b03847c6beb81184601df6a7933cd94be82
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 970612c2341ae7f1f513b96c068cf1a57feaf1ca
+PODFILE CHECKSUM: a2f0683a18c33d5d7e9acd1228b5bf32377598f9
 
 COCOAPODS: 1.5.3
