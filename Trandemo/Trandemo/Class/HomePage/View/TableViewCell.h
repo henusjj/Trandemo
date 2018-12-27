@@ -1,8 +1,8 @@
 //
-//  bannerCell.h
+//  TableViewCell.h
 //  Trandemo
 //
-//  Created by GuoYanjun on 2018/12/5.
+//  Created by GuoYanjun on 2018/12/10.
 //  Copyright © 2018年 shiyujin. All rights reserved.
 //
 
@@ -10,11 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface bannerCell : UICollectionViewCell
-
-@property(nonatomic,strong)NSDictionary *dic;
-
-
+@interface TableViewCell : UITableViewCell
+@property(nonatomic,strong)NSArray *arry;
 @end
 
 NS_ASSUME_NONNULL_END

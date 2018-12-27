@@ -9,7 +9,7 @@
 #import "CaCheViewController.h"
 #import "BannerViewCell.h"
 @interface CaCheViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,responseDelegate>
-@property(nonatomic,strong)NSDictionary *responseDate;
+@property(nonatomic,strong)NSMutableDictionary *responseDate;
 @end
 
 @implementation CaCheViewController
@@ -45,7 +45,8 @@
 }
 
 #pragma mark 数据请求成功
--(void)requestSucesses:(id)responseData{
+-(void)requestSucesses:(NSMutableDictionary *)responseData{
+    self.responseDate =[[NSMutableDictionary alloc]init];
     self.responseDate = responseData;
     if ([self.responseDate[@"code"] isEqualToString:@"10000"]) {
 //        请求数据成功
@@ -68,7 +69,8 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     BannerViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"banner" forIndexPath:indexPath];
-    cell.arryItem =self.responseDate[@"data"][@"bannner"];
+    NSDictionary *dic = self.responseDate[@"data"];
+    cell.arryItem =dic[@"bannner"];
     return cell;
 }
 

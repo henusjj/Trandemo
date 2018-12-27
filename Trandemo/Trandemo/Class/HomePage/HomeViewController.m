@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "ViewController.h"
 #import "CDDTableViewCell.h"
+#import "TableViewCell.h"
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,CDDdelegateCell>
 
 @end
@@ -54,15 +55,25 @@
  @return 1
  */
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NSString *cellid = [NSString stringWithFormat:@"cellif%ld",indexPath.row];
-    CDDTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];
-    if (cell == nil) {
-        cell = [[CDDTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
+    if (indexPath.row == 1) {
+        NSString *cellid = [NSString stringWithFormat:@"cellif"];
+        TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];
+        if (cell == nil) {
+            cell = [[TableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
+        }
+        cell.arry=@[@"1",@"2",@"3",@"44"];
+        return cell;
+
+    }else{
+        NSString *cellid = [NSString stringWithFormat:@"cellif%ld",indexPath.row];
+        CDDTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];
+        if (cell == nil) {
+            cell = [[CDDTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
+        }
+        cell.delegate = self;
+    //    cell.textLabel.text = @"2";
+        return cell;
     }
-    cell.delegate = self;
-//    cell.textLabel.text = @"2";
-    return cell;
 }
 
 -(void)didChangeCell:(UITableViewCell *)cell{

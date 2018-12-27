@@ -16,6 +16,7 @@
 		454709F0219AB5FA00891BF5 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 454709EF219AB5FA00891BF5 /* MineViewController.m */; };
 		454709F3219AB60300891BF5 /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 454709F2219AB60300891BF5 /* OtherViewController.m */; };
 		454709F6219AB67700891BF5 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 454709F5219AB67700891BF5 /* MainTabBarController.m */; };
+		456899E021BE640100BB4E3D /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 456899DE21BE629000BB4E3D /* TableViewCell.m */; };
 		4571FE362195690800F84B6D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4571FE352195690800F84B6D /* ViewController.m */; };
 		4571FE3A21958A6700F84B6D /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4571FE3921958A6700F84B6D /* APIManager.m */; };
 		4571FE3D2195907C00F84B6D /* AllUrlrequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4571FE3C2195907C00F84B6D /* AllUrlrequest.m */; };
@@ -87,6 +88,8 @@
 		454709F2219AB60300891BF5 /* OtherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherViewController.m; sourceTree = "<group>"; };
 		454709F4219AB67700891BF5 /* MainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		454709F5219AB67700891BF5 /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		456899DD21BE629000BB4E3D /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		456899DE21BE629000BB4E3D /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		4571FE342195690800F84B6D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4571FE352195690800F84B6D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4571FE3821958A6700F84B6D /* APIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
@@ -281,6 +284,8 @@
 				45DA15DF21A2ABF900045C8F /* CDDCollectionViewCell.m */,
 				45DA15E221A2B4D000045C8F /* CDZCollectionViewItem.h */,
 				45DA15E121A2B4D000045C8F /* CDZCollectionViewItem.m */,
+				456899DD21BE629000BB4E3D /* TableViewCell.h */,
+				456899DE21BE629000BB4E3D /* TableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -694,6 +699,7 @@
 				45DA15E021A2ABF900045C8F /* CDDCollectionViewCell.m in Sources */,
 				45DA15E721A3D8DB00045C8F /* CeamerViewController.m in Sources */,
 				454709ED219AB5F100891BF5 /* HomeViewController.m in Sources */,
+				456899E021BE640100BB4E3D /* TableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

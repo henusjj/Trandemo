@@ -12,6 +12,8 @@
 @interface BannerViewCell()<UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property(nonatomic,strong)UICollectionView *bannerCollectionView;
+@property(nonatomic,strong)UIPageControl *pageView;
+
 @end
 
 @implementation BannerViewCell
@@ -21,10 +23,10 @@
         layout.minimumLineSpacing =0;
         layout.minimumInteritemSpacing = 0;
         layout.itemSize = CGSizeMake(ScreenWidth, self.contentView.bounds.size.height);
-        layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         _bannerCollectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, self.contentView.bounds.size.height) collectionViewLayout:layout];
         _bannerCollectionView.backgroundColor = [UIColor whiteColor];
-        _bannerCollectionView.showsVerticalScrollIndicator = NO;
+        _bannerCollectionView.showsHorizontalScrollIndicator = NO;
         _bannerCollectionView.pagingEnabled = YES;
         _bannerCollectionView.delegate=self;
         _bannerCollectionView.dataSource=self;
@@ -33,11 +35,26 @@
     return _bannerCollectionView;
 }
 
+-(UIPageControl *)pageView{
+    if (!_pageView) {
+        _pageView = [[UIPageControl alloc]init];
+        _pageView.pageIndicatorTintColor = [UIColor blackColor];
+        _pageView.currentPageIndicatorTintColor = [UIColor whiteColor];
+        _pageView.backgroundColor = [UIColor redColor];
+    }
+    return _pageView;
+}
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self.contentView addSubview:self.bannerCollectionView];
         [self.bannerCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.contentView).offset(0);
+        }];
+        [self.contentView addSubview:self.pageView];
+        [self.pageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self.bannerCollectionView.mas_bottom).offset(0);
+            make.height.equalTo(@20);
+            make.left.right.equalTo(self.bannerCollectionView).mas_offset(0);
         }];
     }
     return self;
@@ -47,7 +64,7 @@
     return 1;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return _arryItem.count;
+    return _arryItem.count*2;
 //    return 4;
 }
 
@@ -56,5 +73,14 @@
     cell.dic = _arryItem[indexPath.row];
     return cell;
 }
+
+-(void)setArryItem:(NSArray *)arryItem{
+    _arryItem = arryItem;
+    [self.bannerCollectionView reloadData];
+    self.pageView.hidden = !_arryItem.count;
+    self.pageView.numberOfPages = _arryItem.count;
+    self.pageView.currentPage =0;
+}
+
 
 @end
